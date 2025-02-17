@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.meter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.meter-fill {
+    height: 100%;
+    width: 0;
+    background: #ff3d68;
+    transition: width 0.2s;
+}
+
+.instructions-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80vw;
+    z-index: 999;
+    animation: fadeIn 1s ease;
+}
+
+.instructions-popup h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 8vw;
+    color: #ff3d68;
+    margin-bottom: 10px;
+}
+
+.instructions-popup p {
+    font-size: 4vw;
+    color: #555;
+}
+
+.start-button {
+    padding: 12px 30px;
+    font-size: 5vw;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.start-button:hover {
+    background-color: #ff3d68;
+    transform: scale(1.05);
+}
+
+.fade-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+/* Hurray Text */
+.hurray-text {
+    font-family: 'Roboto', bold;
+    font-size: 10vw;
+    color: #ff6f91;
+    margin-bottom: 20px;
+    animation: popIn 2s ease;
+}
+
+/* Celebration GIF */
+.celebration-gif {
+    max-width: 60vw;
+    max-height: 60vh;
+    border-radius: 20px;
+    animation: popIn 1.5s ease;
+}
+
+/* Centering Container */
+.gif-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    text-align: center;
+}
+
+/* Bounce Animation for Hurray Text */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Pop-In Animation for GIF */
+@keyframes popIn {
+    0% {opacity: 0; }
+    100% { opacity: 1; }
+}
