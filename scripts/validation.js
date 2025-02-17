@@ -4,7 +4,7 @@ function checkName() {
     const nameInput = document.getElementById('nameInput').value.trim();
     const errorMessage = document.getElementById('errorMessage');
     
-    if (nameInput.toLowerCase() === "malavika")/*||(nameInput.toLowerCase() === "malavika ranjith")*/){
+    if ((nameInput.toLowerCase() === "malavika")||(nameInput.toLowerCase() === "malavika ranjith")){
         localStorage.setItem('isLoggedIn', true);
         window.location.href = "game.html";
     } else {
