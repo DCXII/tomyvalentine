@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Hearts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/game.css">
+    <script defer src="scripts/game.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="meter">
+            <div class="meter-fill" id="meterFill"></div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Instructions Pop-Up -->
+    <div class="instructions-popup" id="instructionsPopup">
+        <h3>Welcome to</h3>
+        <h2>Catch the hearts!</h2>
+        <p>Catch the falling hearts using the basket to fill the love meter.<br>
+        Missing hearts will decrease the meter.<br>
+        Fill the meter to win!</p>
+        <button class="start-button" onclick="startGame()">Start Game</button>
+    </div>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="assets/music/background.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>
